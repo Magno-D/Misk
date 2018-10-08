@@ -21,8 +21,7 @@ npm install queue
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}!`);
     console.log(`in ${client.guilds.size} servers `)
-    console.log(`[Codes] ${client.users.size}`)
-    client.user.setStatus("idle")
+    console.log(`[Magno] ${client.users.size}`)
 });
 client.on("ready", function() {
 	console.log("ready");
