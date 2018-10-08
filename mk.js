@@ -24,7 +24,7 @@ client.on('ready', () => {
     console.log(`[Codes] ${client.users.size}`)
     client.user.setStatus("idle")
 });
-bot.on("ready", function() {
+client.on("ready", function() {
 	console.log("ready");
 	
 	bot.user.setStatus("Online");
