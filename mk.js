@@ -24,9 +24,11 @@ client.on('ready', () => {
     console.log(`[Codes] ${client.users.size}`)
     client.user.setStatus("idle")
 });
-client.on('ready', () => {
-     client.user.setActivity("you",{type: 'WATCHING'});
- 
+bot.on("ready", function() {
+	console.log("ready");
+	
+	bot.user.setStatus("Online");
+	bot.user.setGame("Mplay | Misk...");
 });
 const prefix = "M"
 client.on('message', async msg => {
@@ -317,6 +319,25 @@ function play(guild, song) {
 })
 })
 })
+}
+});
+const developers = ["331975722283302912","399164491201249282"]
+const adminprefix = "M";
+bot.on('message', message => {
+    var argresult = message.content.split(` `).slice(1).join(' ');
+      if (!developers.includes(message.author.id)) return;
+      
+  if (message.content.startsWith(adminprefix + 'ply')) {
+    bot.user.setGame(argresult);
+      message.channel.send(`**✅   ${argresult}**`)
+  } else 
+  if (message.content.startsWith(adminprefix + 'setname')) {
+  bot.user.setUsername(argresult).then
+      message.channel.send(`Changing The Name To ..**${argresult}** `)
+} else
+if (message.content.startsWith(adminprefix + 'setavatar')) {
+  bot.user.setAvatar(argresult);
+    message.channel.send(`Changing The Avatar To :**${argresult}** `);
 }
 });
 client.login(process.env.BOT_TOKEN);
