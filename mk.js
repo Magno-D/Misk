@@ -27,8 +27,8 @@ client.on('ready', () => {
 client.on("ready", function() {
 	console.log("ready");
 	
-	bot.user.setStatus("Online");
-	bot.user.setGame("Mplay | Misk...");
+	client.user.setStatus("Online");
+	client.user.setGame("Mplay | Misk...");
 });
 const prefix = "M"
 client.on('message', async msg => {
